@@ -9,16 +9,8 @@ Original file is located at
 
 !apt-get install tesseract-ocr
 !pip install opencv-python matplotlib pytesseract
-!pip install flask flask-ngrok pyngrok
-!pip install flask-cors
-
-!ngrok authtoken 2q2LKBL3bXCjxFYVF5LA0kEaO9j_8ByLrcauEZaBeNQVbnT8
-from pyngrok import ngrok
-
-# Conectar a ngrok con dominio personalizado
-public_url = ngrok.connect(addr=5000, domain="goblin-apt-curiously.ngrok-free.app")
-
-print("La URL pública de ngrok es:", public_url)
+!pip install flask flask-cors
+!pip install flask-ngrok pyngrok
 
 from flask import Flask, request, jsonify
 from flask_cors import CORS
@@ -75,4 +67,3 @@ def ocr_endpoint():
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0', port=5000)
-
