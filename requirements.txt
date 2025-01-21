@@ -1,0 +1,7 @@
+# Crear un archivo requirements.txt con las dependencias necesarias
+with open("requirements.txt", "w") as f:
+    f.write("flask\n")
+    f.write("flask-cors\n")
+    f.write("opencv-python\n")
+    f.write("pytesseract\n")
+    f.write("pyngrok\n")
